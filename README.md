@@ -1,17 +1,17 @@
-# 🩺 Robotic Surgical Gesture Recognition Using Deep Learning
+ Robotic Surgical Gesture Recognition Using Deep Learning
 
-🚀 A Deep Learning Framework for Automatic Surgical Gesture Identification and Classification Using 3D Convolutional Neural Networks (Conv3D + LSTM)
+ A Deep Learning Framework for Automatic Surgical Gesture Identification and Classification Using 3D Convolutional Neural Networks (Conv3D + LSTM)
 
-📘 Overview
+ Overview
 
 This repository contains two deep learning projects focused on robotic surgical gesture recognition from video data.
 The goal is to enable automated understanding of robotic motions during surgical procedures using video-based deep learning models.
 
-#🔹 Project 1 — Gesture Identification
+ Project 1 — Gesture Identification
 
 Binary classification model that determines whether the robot is performing gesture G3 ("Pushing the needle through tissue") or any other gesture (NON-G3).
 
-#🔹 Project 2 — Gesture Classification
+ Project 2 — Gesture Classification
 
 Multiclass model that classifies robotic surgical actions into one of five gestures:
 
@@ -25,7 +25,7 @@ G4 – Transferring the needle from left to right hand
 
 G11 – Dropping the suture at the end and moving to end points
 
-💡 Project Intuition
+ Project Intuition
 
 During robot-assisted surgeries, surgeons perform atomic gestures (surgemes) that follow a predictable workflow.
 Each gesture has a unique spatio-temporal signature, which can be captured by video-based neural networks.
@@ -34,7 +34,7 @@ Intuition:
 
 “Each surgical gesture leaves a distinct spatial and temporal pattern. By analyzing short clips of video frames, a deep learning model can automatically recognize the gesture being performed.”
 
-🧠 Motivation
+ Motivation
 
 Robotic surgery requires precise, repeatable gestures. Automatic gesture recognition can help in:
 
@@ -48,8 +48,8 @@ Training and performance feedback
 
 This project builds models that can learn and classify these gestures directly from surgical video frames, reducing the need for manual annotation.
 
-⚙️ Technical Details
-🧱 Model Architectures
+ Technical Details
+ Model Architectures
 
 Conv3D + Batch Normalization (for both binary and multiclass tasks)
 
@@ -67,7 +67,7 @@ LSTM models temporal gesture progression across frames
 
 Effective for sequential robotic motion data
 
-🧮 Data Processing Pipeline
+ Data Processing Pipeline
 
 Dataset Organization
 
@@ -95,7 +95,7 @@ Multiclass: One-hot encoded labels (g1–g11)
 
 Binary: 0 = NON_G3, 1 = G3
 
-🧪 Training Configuration
+Training Configuration
 Parameter	Value
 Input Frames	16 (identification) / 32 (classification)
 Image Size	112 × 112
@@ -111,14 +111,14 @@ Metric	Training	Validation
 Accuracy	85.9%	91.1%
 Loss	0.33	0.24
 
-✅ The model successfully distinguishes G3 gestures from all other gestures.
+ The model successfully distinguishes G3 gestures from all other gestures.
 
 🔹 Project 2 – Gesture Classification (G1, G2, G3, G4, G11)
 Metric	Training	Validation
 Accuracy	84.3%	93.9%
 Loss	0.48	0.23
 
-✅ The model generalizes well to multiple gesture types, learning fine-grained temporal motion patterns.
+ The model generalizes well to multiple gesture types, learning fine-grained temporal motion patterns.
 
 🔹 Confusion Matrix
 | Actual → / Predicted ↓ | G1  | G2  | G3  | G4  | G11 |
@@ -137,7 +137,7 @@ Subtle gestures (G2) may have minor confusion with adjacent gestures
 
 The model captures both spatial orientation and temporal progression effectively
 
-🧩 Use Cases
+Use Cases
 
 Surgical Skill Assessment – analyze gesture accuracy and efficiency
 
